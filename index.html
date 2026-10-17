@@ -79,12 +79,15 @@ function yes() {
     "И последний вопрос — ты точно не передумаешь? 💞"
 ];
 
+  
+
+const index = Math.min(step - 1, questions.length - 1);
+document.getElementById("question").textContent = questions[index];
 }
   let noCount = 0;
 
 function no() {
     const question = document.getElementById("question");
-    const message = document.getElementById("message");
 
     const replies = [
         "Может, подумаешь ещё раз? ❤️",
@@ -95,8 +98,6 @@ function no() {
 
     const index = Math.min(noCount, replies.length - 1);
 
-    message.textContent = replies[index];
-    noCount++;
 }
 </script>
 </body>
