@@ -67,13 +67,32 @@ button {
 <script>
 let step = 0;
 function yes() {
-  step++;
-  document.getElementById("question").textContent =
-    step === 1 ? "Правда-правда? 🥹" :
-    step === 2 ? "А обнимашки котикам? 🐈💕" :
-    "УРААА! 💖 Котики счастливы";
-  document.getElementById("message").textContent =
-    step >= 3 ? "Мур-мур-мур 💗💗💗" : "Мяу. Мы так рады 🐾";
+    step++;
+
+    const questions = [
+        "Правда-правда? 🥺",
+        "А обнимашки котикам? 🐈💕",
+        "Будешь меня баловать? 💗",
+        "Обнимешь крепко-крепко? 🫂",
+        "Будем всегда поддерживать друг друга? 🥹",
+        "Я делаю тебя счастливым человеком? ❤️",
+        "Тогда котики счастливы! 💕"
+    ];
+
+    const messages = [
+        "Я так и знала! 💗",
+        "Котики ждут обнимашек 🐱",
+        "Урааа, как приятно! 💖",
+        "Мур-мур-мур 🐾",
+        "Ты у меня самый лучший! 💕",
+        "Крепко-крепко обнимаю! 🫂",
+        "Мур-мур-мур 💗💗💗"
+    ];
+
+    const index = Math.min(step - 1, questions.length - 1);
+
+    document.getElementById("question").textContent = questions[index];
+    document.getElementById("message").textContent = messages[index];
 }
 function no() {
   document.getElementById("question").textContent =
