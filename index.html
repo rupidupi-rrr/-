@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тибе 💗</title>
+<style>
+body {
+  background: #ffe6f0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #d84d83;
+  padding-top: 50px;
+}
+.card {
+  background: #fff5fa;
+  border: 2px solid #ffb5d1;
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 360px;
+  margin: auto;
+  box-shadow: 0 5px 20px #e9a4c0;
+}
+.cat {
+  font-size: 100px;
+  margin: 15px;
+}
+button {
+  background: #e96c9c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  margin: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+#message {
+  min-height: 24px;
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h3>У меня к тебе вопрос 💗</h3>
+  <div class="cat" id="cat">🐱💕</div>
+  <h3 id="question">Ты меня любишь?</h3>
+  <p id="message">Выбирай честно!</p>
+  <button onclick="yes()">Да 💗</button>
+  <button onclick="no()">Нет 🙈</button>
+</div>
+
+<script>
+let step = 0;
+
+function yes() {
+  step++;
+  document.getElementById("cat").textContent = "😻💕";
+  document.getElementById("message").textContent =
+    "УРААА! 💗💗💗";
+  document.getElementById("question").textContent =
+    step === 1 ? "А очень-очень?" :
+    step === 2 ? "А всегда будешь?" :
+    "Я тоже тебя люблю! 💖";
+}
+
+function no() {
+  document.getElementById("cat").textContent = "🥺🐱";
+  document.getElementById("question").textContent =
+    "Ты уверен? 🥺";
+  document.getElementById("message").textContent =
+    "Подумай ещё разочек 💗";
+}
+</script>
+</body>
+</html>
