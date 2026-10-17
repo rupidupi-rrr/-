@@ -87,17 +87,18 @@ document.getElementById("question").textContent = questions[index];
   let noCount = 0;
 
 function no() {
-    const question = document.getElementById("question");
-
     const replies = [
         "Может, подумаешь ещё раз? ❤️",
-        "Мне очень хочется услышать другое…",
-        "Ну пожалуйста 🥹",
+        "Не то",
+        "Ну пожалуйста",
         "Я всё ещё жду твоего ответа ❤️"
     ];
 
     const index = Math.min(noCount, replies.length - 1);
 
+    document.getElementById("question").textContent = replies[index];
+
+    noCount++;
 }
 </script>
 </body>
