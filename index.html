@@ -70,37 +70,47 @@ function yes() {
     step++;
 
     const questions = [
-        "Правда-правда? 🥺",
-        "А обнимашки котикам? 🐈💕",
-        "Будешь меня баловать? 💗",
-        "Обнимешь крепко-крепко? 🫂",
-        "Будем всегда поддерживать друг друга? 🥹",
-        "Я делаю тебя счастливым человеком? ❤️",
-        "Тогда котики счастливы! 💕"
-    ];
+    "Ты меня любишь? ❤️",
+    "Правда-правда?",
+    "Обнимать меня будешь?",
+    "Обнимешь сильно-сильно? 🫂",
+    "Будем всегда любить друг друга? 💗",
+    "Ты счастлив со мной? ❤️",
+    "И последний вопрос — ты точно не передумаешь? 💞"
+];
 
-    const messages = [
-        "Я так и знала! 💗",
-        "Котики ждут обнимашек 🐱",
-        "Урааа, как приятно! 💖",
-        "Мур-мур-мур 🐾",
-        "Ты у меня самый лучший! 💕",
-        "Крепко-крепко обнимаю! 🫂",
-        "Мур-мур-мур 💗💗💗"
-    ];
+const messages = [
+    "Я так и знала! 💗",
+    "Мне так приятно это слышать!",
+    "Тогда иди обниматься! 🫂",
+    "Не отпущу! 💕",
+    "И пусть так будет всегда!",
+    "Ты даже не представляешь, как я рада! ❤️",
+    "Я тебя очень-очень люблю! 💗"
+];
 
     const index = Math.min(step - 1, questions.length - 1);
 
     document.getElementById("question").textContent = questions[index];
     document.getElementById("message").textContent = messages[index];
 }
+let noCount = 0;
+
 function no() {
-  document.getElementById("question").textContent =
-    "Котики просят подумать ещё 🥺";
-  document.getElementById("message").textContent =
-    "Посмотри, как они стараются! 🐈💕";
-   document.getElementById("question").textContent =
-     "Пашалуста"
+    const question = document.getElementById("question");
+    const message = document.getElementById("message");
+
+    const replies = [
+        "Может, подумаешь ещё раз? ❤️",
+        "Мне очень хочется услышать другое…",
+        "Ну пожалуйста 🥹",
+        "Я всё ещё жду твоего ответа ❤️"
+    ];
+
+    const index = Math.min(noCount, replies.length - 1);
+
+    message.textContent = replies[index];
+    noCount++;
 }
 </script>
 </body>
