@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Для тебя 💗</title>
+<title>Тибе 💗</title>
 <style>
 * { box-sizing: border-box; }
 body {
@@ -51,7 +51,7 @@ button {
 </head>
 <body>
 <main class="card">
-  <h2>Посмотри, кто прибежал! 💗</h2>
+  <h2>Посмотри, кто прибежал 💗</h2>
   <p>Два маленьких котика для тебя</p>
   <div class="scene">
     <span class="cat cat1">🐈</span>
@@ -59,10 +59,10 @@ button {
     <span class="heart">💕</span>
   </div>
   <h3 id="question">Ты меня любишь? 💖</h3>
-  <p id="message">Выбирай ответик 🥺</p>
+  <p id="message">Выбирай 🥺</p>
   <button onclick="yes()">Да 💗</button>
   <button onclick="no()">Нет 🙈</button>
-  <p class="small">Сделано с любовью 💌</p>
+  <p class="small">Любимому 💌</p>
 </main>
 <script>
 let step = 0;
@@ -71,15 +71,17 @@ function yes() {
   document.getElementById("question").textContent =
     step === 1 ? "Правда-правда? 🥹" :
     step === 2 ? "А обнимашки котикам? 🐈💕" :
-    "УРААА! 💖 Котики счастливы!";
+    "УРААА! 💖 Котики счастливы";
   document.getElementById("message").textContent =
-    step >= 3 ? "Мур-мур-мур! 💗💗💗" : "Мяу! Мы так рады! 🐾";
+    step >= 3 ? "Мур-мур-мур 💗💗💗" : "Мяу. Мы так рады 🐾";
 }
 function no() {
   document.getElementById("question").textContent =
     "Котики просят подумать ещё 🥺";
   document.getElementById("message").textContent =
     "Посмотри, как они стараются! 🐈💕";
+   document.getElementById("question").textContent =
+     "Пашалуста"
 }
 </script>
 </body>
